@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Fazenda 3D</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="game"></div>
+
+  <!-- HUD -->
+  <div id="hud" class="panel">
+    <div class="row"><span id="money">R$ 0</span></div>
+    <div class="row small"><span id="level">Nível 1</span> · <span id="store">Armazém 0/80</span></div>
+    <div class="row small" id="market-tip"></div>
+  </div>
+
+  <div id="missions" class="panel">
+    <div class="panel-title">Missões</div>
+    <div id="missions-list"></div>
+    <div class="hint">Tab: lista completa (M)</div>
+  </div>
+
+  <div id="messages"></div>
+  <div id="prompt" class="hidden"></div>
+  <div id="build-banner" class="hidden"></div>
+  <div id="fishing" class="hidden"><div class="bar"><div id="fish-bar"></div></div><span>Pescando...</span></div>
+  <div id="vehicle-hud" class="hidden"></div>
+
+  <div id="hotbar"></div>
+  <div id="help-hint" class="hint-bottom">H: ajuda · I: inventário · L: loja · O: oficina · B: construir · M: missões</div>
+
+  <!-- Modal genérico (loja, oficina, construção, inventário...) -->
+  <div id="modal" class="hidden">
+    <div class="box">
+      <header>
+        <h2 id="modal-title"></h2>
+        <button id="modal-close" class="icon-btn" title="Fechar (Esc)">✕</button>
+      </header>
+      <nav id="modal-tabs"></nav>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Tela inicial -->
+  <div id="start" class="screen">
+    <div class="start-box">
+      <h1>🌾 Jogo da Fazenda 3D</h1>
+      <p>Plante, crie animais em casal para ter filhotes, pesque, cuide das abelhas, produza alimentos, venda no mercado e cumpra missões.</p>
+      <div class="start-buttons">
+        <button id="btn-continue" class="btn primary">Continuar</button>
+        <button id="btn-new" class="btn">Novo jogo</button>
+      </div>
+      <p class="small">Dica: a tecla <b>H</b> mostra todos os controles dentro do jogo.</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
